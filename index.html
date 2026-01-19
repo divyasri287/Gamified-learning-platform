@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Gamified Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg">
+  <div class="card">
+    <h2>WELCOME BACK,<br><span>FUTURE LEADER!</span></h2>
+
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+
+      <div class="links">
+        <a href="register.html" class="create">Create Account</a>
+        <a href="forgot.html" class="forgot-link">Forgot Password?</a>
+      </div>
+
+      <!-- IMPORTANT: type="submit" -->
+      <button type="submit" class="login-btn">LOGIN ↑</button>
+    </form>
+
+    <div class="or">OR</div>
+
+    <!-- ✅ FIX: id added -->
+    <button class="google" id="googleLoginBtn" type="button">
+  <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+  Continue with Google
+</button>
+
+  </div>
+</div>
+
+<!-- ✅ FIX: firebase.js MUST be loaded first -->
+<script type="module" src="firebase.js"></script>
+<script type="module" src="login.js"></script>
+
+</body>
+</html>

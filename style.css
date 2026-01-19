@@ -1,0 +1,289 @@
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #eaf9ff 0%,
+    #eaf9ff 50%,
+    #dff3f7 100%
+  );
+}
+
+/* Center the card perfectly */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #dff9fb, #c7ecee);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating emojis */
+
+
+/* ================= CARD ================= */
+.card {
+  width: 380px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 35px 30px;
+  text-align: center;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+
+/* Card animation */
+@keyframes popIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ================= HEADING ================= */
+.card h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: #1e88e5; /* fallback */
+  background: linear-gradient(90deg, #1e88e5, #43cea2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+/* ================= INPUTS ================= */
+input,
+select {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  border: 2px solid #90caf9;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+/* Placeholder */
+input::placeholder {
+  color: #888;
+  font-weight: 500;
+}
+
+/* Hover effect */
+input:hover,
+select:hover {
+  transform: scale(1.03);
+}
+
+/* Focus glow */
+input:focus,
+select:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 10px rgba(30, 136, 229, 0.5);
+}
+
+/* Dropdown */
+select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: 2px solid #6ab7ff;
+  font-size: 15px;
+  outline: none;
+  margin-bottom: 15px;
+  background: #fff;
+}
+
+/* ================= LINKS ================= */
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 20px;
+  font-size: 14px;
+}
+
+.create {
+  color: #2ecc71;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.forgot {
+  color: #e67e22;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.create:hover,
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* ================= BUTTON ================= */
+.login-btn,
+.register-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #42a5f5, #1e88e5);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.login-btn:active,
+.register-btn:active {
+  transform: scale(0.95);
+}
+
+/* ================= OR ================= */
+.or {
+  margin: 18px 0;
+  font-weight: 700;
+  color: #555;
+}
+
+/* ================= GOOGLE BUTTON ================= */
+.google {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: 2px solid #ddd;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.google img {
+  width: 20px;
+}
+
+.google:hover {
+  background: #f5f5f5;
+}
+
+/* ================= ERROR MESSAGE ================= */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ================= REGISTER FOOTER ================= */
+.footer-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.footer-text a {
+  color: #1e88e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 450px) {
+  .card {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(79, 172, 254, 0.6);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+.btn {
+  margin-bottom: 18px; /* Create Account button keezha space */
+}
+
+.login-text {
+  margin-top: 10px; /* text mela space */
+}
+html {
+  background: #eaf9ff;
+}
+
