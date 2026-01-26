@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow | My Tasks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">✓</div>
+      <div>
+        <h1>TaskFlow</h1>
+        <p id="welcomeText">My Tasks</p>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <button class="theme-btn" id="themeToggle" title="Toggle Theme">🌙</button>
+      <button class="btn danger small" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+
+      <div class="task-header">
+        <div>
+          <h2>My Tasks</h2>
+          <p class="muted" id="taskCountText">Pending: 0</p>
+        </div>
+
+        <button class="btn primary" id="goAddTask">+ Add Task</button>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-wrap">
+        <input type="text" id="searchInput" placeholder="Search tasks..." />
+      </div>
+
+      <div class="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="pending">Pending</button>
+        <button class="chip" data-filter="completed">Completed</button>
+      </div>
+
+      <div id="taskList" class="task-list"></div>
+
+      <p id="emptyText" class="muted center hidden">No tasks found. Add your first task ✨</p>
+    </section>
+  </main>
+
+  <!-- Toast -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

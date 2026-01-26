@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Create Account</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow | Register</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <center>
-<script type="module" src="register.js"></script>
-  <div class="container">
-    <div class="card">
-      <h2>Create Account</h2>
-      <form id="registerForm">
-        <input type="text" id="username" placeholder="Username" required />
-        <input type="email" id="email" placeholder="Email" required />
-        <input type="password" id="password" placeholder="Password" required />
-        <select id="role" required>
-          <option value="">Select Role</option>
-          <option value="student">Student</option>
-          <option value="teacher">Teacher</option>
-        </select>
-        <button type="submit" class="btn">Create Account</button>
-        <p class="login-text">
-          Already have an account? <a href="index.html">Login</a>
-        </p>
-      </form>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">✓</div>
+      <div>
+        <h1>TaskFlow</h1>
+        <p>Organize your day like a pro</p>
+      </div>
     </div>
-  </div>
-  </center>
+
+    <button id="themeToggle" class="theme-btn">🌙</button>
+  </header>
+
+  <main class="auth-wrap">
+    <div class="card auth-card">
+      <h2>Create Account</h2>
+      <p class="sub">Create your own email & password</p>
+
+      <form id="registerForm" class="form">
+        <label>Email</label>
+        <input id="regEmail" type="email" placeholder="Enter your email" required />
+
+        <label>Password</label>
+        <input id="regPassword" type="password" placeholder="Create password" required />
+
+        <label>Confirm Password</label>
+        <input id="regConfirm" type="password" placeholder="Confirm password" required />
+
+        <button class="primary-btn" type="submit">Create Account</button>
+
+      </form>
+
+      <p class="link-text">
+        Already have an account?
+        <a href="index.html">Login</a>
+      </p>
+    </div>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="app.js"></script>
 </body>
 </html>

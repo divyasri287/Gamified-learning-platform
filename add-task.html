@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow | Add Task</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">✓</div>
+      <div>
+        <h1>TaskFlow</h1>
+        <p>Add a new task</p>
+      </div>
+    </div>
+
+    <button class="theme-btn" id="themeToggle" title="Toggle Theme">🌙</button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 id="pageTitle">Add Task</h2>
+      <p class="muted" id="pageSub">Fill details and add your task</p>
+
+      <form id="addTaskForm" class="form">
+        <label>Enter Task</label>
+        <input type="text" id="taskName" placeholder="Eg: Complete assignment" required />
+
+        <label>Priority</label>
+        <select id="priority" required>
+          <option value="High">High</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="Low">Low</option>
+        </select>
+
+        <label>Due Date</label>
+        <input type="date" id="dueDate" required />
+
+        <button type="submit" class="btn primary" id="submitBtn">Add Task</button>
+        <button type="button" class="btn ghost" id="backBtn">← Back</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Toast -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
